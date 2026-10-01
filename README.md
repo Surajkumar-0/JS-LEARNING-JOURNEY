@@ -92,3 +92,59 @@ The `typeof` operator reports the type of a value as a string. For example, `typ
 - Objects can hold collections of related values.
 - `typeof null` returns `"object"` because of a long-standing language quirk.
 - In Node.js, use `console.log()` to display values; browser-only functions such as `alert()` are not available by default.
+
+
+# 03_Type Conversion and Operations:-
+
+JavaScript can convert values from one data type to another. A conversion can be **explicit**, when the programmer requests it, or **implicit**, when JavaScript performs it automatically.
+
+## Explicit type conversion
+
+### `Number()`
+
+`Number()` converts a value to a number when possible. A numeric string such as `"33"` becomes `33`. A string that is not a valid number, such as `"33abc"`, becomes `NaN` (Not a Number). `NaN` has the JavaScript type `number`.
+
+When converted to a number, `true` becomes `1` and `false` becomes `0`.
+
+### `Boolean()`
+
+`Boolean()` converts a value to `true` or `false`. Empty strings, `0`, `-0`, `NaN`, `null`, and `undefined` convert to `false`. These are called **falsy** values. Other values—including non-empty strings such as `"false"`—convert to `true` and are called **truthy** values.
+
+### `String()`
+
+`String()` converts a value to text. For example, the number `33` becomes the string `"33"`.
+
+## Implicit conversion
+
+In some expressions, JavaScript automatically converts values to make the operation possible. With `+`, if a string is involved, values are generally converted to strings and joined. For example, `"1" + 2` produces `"12"`. The order matters: `1 + 2 + "2"` first adds the numbers, then joins the result with the string, producing `"32"`.
+
+Use explicit conversion when you want the result to be clear and predictable.
+
+## Arithmetic operators
+
+| Operator | Operation |
+| --- | --- |
+| `+` | Addition |
+| `-` | Subtraction; unary `-` also changes a number's sign |
+| `*` | Multiplication |
+| `/` | Division |
+| `%` | Remainder after division |
+| `**` | Exponentiation (power) |
+
+Parentheses can control the order of operations, as in regular arithmetic.
+
+## Increment operators
+
+`++` increases a number by one. Prefix increment (`++value`) changes the value before the expression is evaluated; postfix increment (`value++`) evaluates the current value first, then changes it. If it is used as a standalone statement, both forms increase the variable by one.
+
+## Assignment chaining
+
+An assignment such as `num1 = num2 = num3 = 2 + 2` assigns the result from right to left. Each variable receives the value `4`.
+
+## Key points
+
+- Use `Number()`, `Boolean()`, and `String()` for explicit conversion.
+- An invalid numeric conversion results in `NaN`; its type is still `number`.
+- Empty strings and zero are falsy, while non-empty strings are truthy.
+- `+` can add numbers or join strings, depending on the values and expression order.
+- Prefer clear conversions and parentheses to make expressions easier to understand.
