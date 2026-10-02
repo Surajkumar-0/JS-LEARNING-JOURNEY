@@ -148,3 +148,42 @@ An assignment such as `num1 = num2 = num3 = 2 + 2` assigns the result from right
 - Empty strings and zero are falsy, while non-empty strings are truthy.
 - `+` can add numbers or join strings, depending on the values and expression order.
 - Prefer clear conversions and parentheses to make expressions easier to understand.
+
+
+# 04_Strings:-
+
+A string is a sequence of text characters. Strings can be written with single quotes, double quotes, or backticks. Strings are immutable, which means string methods return a new string rather than changing the original.
+
+## Template literals
+
+Backticks create a template literal. They allow variables and expressions to be inserted with `${...}` and make it easy to build readable text.
+
+## String objects
+
+JavaScript also has a `String` object constructor. For everyday text, use string primitives such as `"suraj"`; they are simpler and are usually preferred over creating a `String` object with `new String()`.
+
+## Useful string properties and methods
+
+| Property or method | What it does |
+| --- | --- |
+| `length` | Returns the number of UTF-16 code units in the string |
+| `toUpperCase()` | Returns an uppercase version of the string |
+| `charAt(index)` | Returns the character at an index; indexing starts at `0` |
+| `indexOf(text)` | Returns the first matching position, or `-1` if it is not found |
+| `substring(start, end)` | Returns text between two positions; the end position is excluded |
+| `slice(start, end)` | Returns part of a string; it accepts negative positions counted from the end |
+| `trim()` | Removes whitespace from the beginning and end |
+| `replace(search, replacement)` | Returns a copy with the first matching text replaced (for a string search) |
+| `includes(text)` | Returns `true` if the string contains the given text, otherwise `false` |
+| `split(separator)` | Splits a string into an array using the separator |
+
+## String indexes and ranges
+
+String indexes start at `0`. In methods such as `slice()` and `substring()`, the start position is included and the end position is excluded. `slice()` supports negative indexes, which count from the end of the string. `substring()` handles negative values differently, so use `slice()` when you need negative positions.
+
+## Key points
+
+- Use backticks and `${...}` to insert values into text.
+- String methods do not change the original string; they return a value or a new string.
+- `indexOf()` returns `-1` when the search text is absent.
+- `split()` returns an array, while `includes()` returns a boolean.
