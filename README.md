@@ -188,7 +188,7 @@ String indexes start at `0`. In methods such as `slice()` and `substring()`, the
 - `indexOf()` returns `-1` when the search text is absent.
 - `split()` returns an array, while `includes()` returns a boolean.
 
-# 04_Numbers and Math:-
+# 05_Numbers and Math:-
 
 JavaScript uses the `Number` type for most numeric values. Number methods can format a value for display, while the built-in `Math` object provides common mathematical operations.
 
