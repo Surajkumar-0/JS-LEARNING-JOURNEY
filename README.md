@@ -187,3 +187,47 @@ String indexes start at `0`. In methods such as `slice()` and `substring()`, the
 - String methods do not change the original string; they return a value or a new string.
 - `indexOf()` returns `-1` when the search text is absent.
 - `split()` returns an array, while `includes()` returns a boolean.
+
+# 04_Numbers and Math:-
+
+JavaScript uses the `Number` type for most numeric values. Number methods can format a value for display, while the built-in `Math` object provides common mathematical operations.
+
+## Number formatting methods
+
+| Method | What it does |
+| --- | --- |
+| `toString()` | Converts a number to a string |
+| `toFixed(digits)` | Formats a number with a set number of digits after the decimal point; returns a string |
+| `toPrecision(digits)` | Formats a number to a set number of significant digits; returns a string |
+| `toLocaleString(locale)` | Formats a number according to a locale, such as `en-IN` |
+
+Formatting methods are useful for presentation. Their string results should be converted back to numbers if you need to do further arithmetic.
+
+## Common `Math` methods
+
+| Method | What it does |
+| --- | --- |
+| `Math.abs(value)` | Returns the absolute (non-negative) value |
+| `Math.round(value)` | Rounds to the nearest integer |
+| `Math.ceil(value)` | Rounds upward to the next integer |
+| `Math.floor(value)` | Rounds downward to the previous integer |
+| `Math.min(a, b, ...)` | Returns the smallest argument |
+| `Math.max(a, b, ...)` | Returns the largest argument |
+| `Math.random()` | Returns a pseudo-random decimal greater than or equal to `0` and less than `1` |
+
+## Random integers in a range
+
+To get a random integer between `min` and `max`, including both endpoints, use the formula:
+
+```js
+Math.floor(Math.random() * (max - min + 1)) + min
+```
+
+`Math.random()` creates a value from `0` up to (but not including) `1`. Multiplication scales it to the desired range, `Math.floor()` makes it an integer, and adding `min` shifts the result to the lower bound.
+
+## Key points
+
+- `toFixed()` controls decimal places; `toPrecision()` controls significant digits.
+- Number formatting methods return strings.
+- `Math.random()` never returns `1`.
+- Add `+ 1` in the range formula to include the maximum integer.
