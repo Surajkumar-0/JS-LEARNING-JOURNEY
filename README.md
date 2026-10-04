@@ -231,3 +231,41 @@ Math.floor(Math.random() * (max - min + 1)) + min
 - Number formatting methods return strings.
 - `Math.random()` never returns `1`.
 - Add `+ 1` in the range formula to include the maximum integer.
+
+
+# 05_Dates and Time:-
+
+JavaScript's `Date` object represents a specific moment in time. A new `Date` created without arguments represents the current date and time. Its display depends on the method used and, for local date methods, the computer's time zone.
+
+## Creating dates
+
+`new Date()` creates the current date and time. A date can also be created from numeric parts or a date string. In the numeric form, months are zero-based: January is `0`, February is `1`, and December is `11`.
+
+For date strings, ISO format such as `"2023-01-14"` is recommended because other string formats can be interpreted differently across environments.
+
+## Displaying dates
+
+| Method | What it returns |
+| --- | --- |
+| `toString()` | A readable date and time string |
+| `toDateString()` | A readable date-only string |
+| `toLocaleString()` | A date and time formatted for a locale |
+| `toLocaleString(locale, options)` | A localized string formatted with chosen options, such as a long weekday name |
+
+These methods return strings; they do not change the stored date.
+
+## Getting date parts
+
+Date getter methods return individual parts of a date. `getMonth()` returns a zero-based month, so add `1` when displaying the usual month number. `getDay()` returns the day of the week, where Sunday is `0` and Saturday is `6`. It does not return the day of the month; use `getDate()` for that.
+
+## Timestamps
+
+`Date.now()` returns the number of milliseconds since January 1, 1970 UTC. Calling `getTime()` on a date returns its timestamp in milliseconds. To convert the current timestamp to whole seconds, divide by `1000` and use `Math.floor()`.
+
+## Key points
+
+- A `Date` is an object representing a moment in time.
+- Month values in numeric date construction and `getMonth()` are zero-based.
+- `getDay()` gives the weekday number; `getDate()` gives the day of the month.
+- Timestamps are measured in milliseconds; divide by `1000` for seconds.
+- Use ISO date strings to avoid ambiguous date parsing.
