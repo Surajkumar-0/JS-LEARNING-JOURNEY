@@ -69,7 +69,7 @@ A data type describes the kind of value a variable holds. JavaScript is a dynami
 - **Number**: Represents numeric values. JavaScript's `Number` type supports values up to about 2<sup>53</sup> in integer precision; use `BigInt` for larger integers.
 - **BigInt**: Represents integers larger than the safe range of `Number`.
 - **String**: Represents text, usually written inside single or double quotation marks.
-- **Boolean**: Represents either `true` or `false`.
+- **Boolean**:Represents either `true` or `false`.
 - **Null**: Represents an intentional absence of a value.
 - **Undefined**: Means a value has not been assigned.
 - **Symbol**: Represents a unique value, often used as a unique object key.
