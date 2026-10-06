@@ -269,3 +269,46 @@ Date getter methods return individual parts of a date. `getMonth()` returns a ze
 - `getDay()` gives the weekday number; `getDate()` gives the day of the month.
 - Timestamps are measured in milliseconds; divide by `1000` for seconds.
 - Use ISO date strings to avoid ambiguous date parsing.
+
+
+# 05_Arrays:-
+
+An array stores an ordered list of values in a single variable. Arrays can contain values of different types, and their indexes start at `0`. Arrays are mutable, which means their contents can be changed after creation.
+
+## Creating arrays
+
+An array can be created with square brackets or with the `Array` constructor. Square brackets are the common choice.
+
+## Common array methods
+
+| Method | What it does |
+| --- | --- |
+| `push(value)` | Adds one or more values to the end of an array |
+| `pop()` | Removes and returns the last value |
+| `unshift(value)` | Adds one or more values to the beginning |
+| `shift()` | Removes and returns the first value |
+| `includes(value)` | Checks whether the array contains a value; returns `true` or `false` |
+| `indexOf(value)` | Returns the first matching index, or `-1` if not found |
+| `join(separator)` | Combines array values into a string, using the optional separator |
+
+Methods that add or remove items change the original array. `join()` returns a string and leaves the array unchanged.
+
+## `slice()` and `splice()`
+
+Both methods can select or remove part of an array, but they behave differently.
+
+| Method | Behavior | Changes original array? |
+| --- | --- | --- |
+| `slice(start, end)` | Returns a shallow copy from `start` up to, but not including, `end` | No |
+| `splice(start, deleteCount)` | Removes `deleteCount` items starting at `start` and returns the removed items | Yes |
+
+For the array `[0, 1, 2, 3, 4, 5]`, `slice(1, 3)` returns `[1, 2]` and leaves the original array unchanged. `splice(1, 3)` removes and returns `[1, 2, 3]`; the original becomes `[0, 4, 5]`.
+
+## Key points
+
+- Array indexes start at `0`.
+- Arrays are mutable, and methods such as `push()`, `pop()`, and `splice()` change the original array.
+- `slice()` returns a portion without changing the original array.
+- The `end` index in `slice()` is excluded.
+
+---
